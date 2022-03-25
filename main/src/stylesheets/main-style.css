@@ -1,0 +1,315 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom Styles */
+
+.container {
+  max-width: 968px;
+  width: 100%;
+  margin: 0px auto;
+  /* border: 1px solid; */
+}
+
+.flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-evenly-center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* header */
+
+.header {
+  padding: 18px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 650;
+  color: rgba(112, 240, 112, 1);
+  background-color: rgba(0, 3, 158, 0.8);
+  margin-bottom: 36px;
+}
+
+/* category article */
+
+.category-main {
+    margin: 16px;
+    /* border: 1px solid; */
+    padding: 24px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 8px;
+}
+.category-main:hover {
+    box-shadow:  0 4px 8px 2px rgba(0,0,0,0.1);
+    margin-bottom: 8px;
+}
+
+.category-main label {
+    display: block;
+    color: rgba(255,255,255,0.8);
+    font-size: 20px;
+    font-weight: 650;
+    margin: 12px 0;
+}
+
+.category-main select {
+    display: block;
+    color: rgba(0,0,0,0.8);
+    font-size: 18px;
+    padding: 12px;
+    width: 356px;
+    font-weight: 650;
+    margin: 12px 0 24px 0;
+}
+
+@media screen and (max-width:438px){
+    .category-main select  {
+        width: 90%;
+    }
+    .category-main select option {
+        width: 90%;
+        font-size: 12px;
+    }
+}
+
+.btn {
+    padding: 16px;
+}
+.quiz-btn {
+    background-color: rgba(255,255,255,1);
+    padding: 12px 36px;
+    font-weight: 650;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: rgba(0,0,0,0.8);
+}
+
+/* questions */
+
+.question-main {
+    width: 80%;
+    margin: 16px;
+    padding: 24px;
+    border: 1px solid;  
+}
+
+.question-main h2 {
+    margin-bottom: 36px;
+    font-size: 24px;
+    font-weight: 650;
+    color: rgba(0,0,0,0.6);
+}
+
+.ques {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 650;
+    padding: 16px 0;
+    line-height: 1.4;
+    color: rgba(0,0,0,0.8);
+}
+
+.options li {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.clicked {
+    background-color: rgba(112, 240, 112, 1);
+    color: rgba(255,255,255,1);
+    font-weight: 750 !important;
+    font-size: 20px !important;
+}
+
+.err-msg {
+    color: red;
+    font-size: 16px;
+}
+
+.btn {
+    display: flex;
+    justify-content: flex-end;
+}
+.next-btn {
+    background-color: rgba(112, 240, 112, 1);
+    color: rgba(255,255,255,1);
+    font-weight: 750 ;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 20px ;
+}
+
+/* loader */
+
+@keyframes bouncing-loader {
+    to {
+      opacity: 0.1;
+      transform: translate3d(0, -16px, 0);
+    }
+  }
+  
+  .bouncing-loader {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .bouncing-loader > div {
+    width: 16px;
+    height: 16px;
+    margin: 3rem 0.2rem;
+    background: #8385aa;
+    border-radius: 50%;
+    animation: bouncing-loader 0.6s infinite alternate;
+  }
+  
+  .bouncing-loader > div:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .bouncing-loader > div:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
