@@ -28,6 +28,9 @@ class Category extends React.Component {
             })
         })
     }
+    componentWillUnmount(){
+        // console.log("unmount")
+    }
     render(){
         if(!this.state.data){
             return <Loader />
