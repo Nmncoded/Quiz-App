@@ -42,7 +42,7 @@ class Category extends React.Component {
                 <section className="category-main">
                     <label htmlFor="">Select Category:</label>
                     <select value={this.state.category} onChange={ (event) => this.handleChange(event,"category")} >
-                        <option value={this.state.data[Math.floor(Math.random()*23)].id} >Any category</option>
+                        <option value={this.state.data[Math.floor(Math.random()*21)].id} >Any category</option>
                         {
                             allCategory.map((item,index) => {
                                 return (
@@ -55,9 +55,9 @@ class Category extends React.Component {
                     <label htmlFor="">Select Difficulty:</label>
                     <select value={this.state.difficulty} onChange={ (event) => this.handleChange(event,"difficulty")} >
                         <option value={this.state.difficulty}>Any Difficulty</option>
-                        <option>easy</option>
-                        <option>medium</option>
-                        <option>hard</option>
+                        <option value='easy' >easy</option>
+                        <option value='medium' >medium</option>
+                        <option value='hard' >hard</option>
                     </select>
                     <div className="btn flex-center-center">
                     <Link  className="quiz-btn" to={`/quiz?amount=10&category=${this.state.category}&difficulty=${this.state.difficulty}`} >Take a Quiz</Link>

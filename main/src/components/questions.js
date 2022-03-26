@@ -22,7 +22,7 @@ class Questions extends React.Component {
         fetch(`https://opentdb.com/api.php?amount=10&category=${params["category"]}&difficulty=${params["difficulty"]}`)
         .then(res => res.json())
         .then(data => {
-            // console.log(data.results);
+            console.log(data.results);
             this.setState({
                 quesData: data.results,
             })
