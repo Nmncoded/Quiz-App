@@ -24,7 +24,7 @@ class Category extends React.Component {
         .then(res => res.json())
         .then(data => {
             this.setState({
-                data: data.trivia_categories,
+                data: data.trivia_categories.filter(item => (item.id !== 13 && item.id !== 25)),
             })
         })
     }
@@ -36,6 +36,7 @@ class Category extends React.Component {
             return <Loader />
         }
         let allCategory = this.state.data;
+        // console.log(allCategory);
         return (
             <article className="container">
                 <section className="category-main">
